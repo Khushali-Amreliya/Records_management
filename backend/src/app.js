@@ -4,11 +4,11 @@ const router = require("./Routes/v1")
 const cors = require("cors")
 
 const app = express()
-const PORT = 5050
+const port = process.env.PORT || 5050;
 app.use(cors());
 
-app.listen(PORT, () => {
-    console.log("Connected Successfully", PORT);
+app.listen(port, () => {
+    console.log("Connected Successfully", port);
 })
 connectDB()
 app.use(express.json())
