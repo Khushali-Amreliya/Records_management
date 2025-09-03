@@ -1,0 +1,19 @@
+* {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.form-control:focus {
+  border-color: #cfcfcf;
+  box-shadow: none
+}
+
+.table>:not(caption)>*>* {
+  box-shadow: none !important;
+  font-size: 12px !important;
+}
+
+.table-bordered>:not(caption)>*>* {
+  border-width: var(--bs-border-width) !important;
+  border-radius: 5px;
+  padding: 4px 5px;
+}
