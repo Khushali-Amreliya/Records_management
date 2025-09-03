@@ -30,7 +30,7 @@ const App = () => {
   const fetchRecords = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:5050/v1/records/list_records");
+      const res = await axios.get("https://records-management.onrender.com/v1/records/list_records");
       setRecords(res.data);
       setLoading(false);
     } catch (err) {
@@ -99,7 +99,7 @@ const App = () => {
         const recordEdit = records[editDetail];
 
         const res = await axios.put(
-          `http://localhost:5050/v1/records/edit_records/${recordEdit._id}`,
+          `https://records-management.onrender.com/v1/records/edit_records/${recordEdit._id}`,
           form
         );
 
@@ -110,7 +110,7 @@ const App = () => {
         toast.success("Record updated successfully");
         setEditDetail(null);
       } else {
-        const res = await axios.post("http://localhost:5050/v1/records/add_records", form);
+        const res = await axios.post("https://records-management.onrender.com/v1/records/add_records", form);
         toast.success("Record added successfully");
         setRecords([...records, res.data.record]);
       }
