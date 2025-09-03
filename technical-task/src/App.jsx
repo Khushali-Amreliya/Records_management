@@ -106,6 +106,7 @@ const App = () => {
         const updatedRecords = [...records];
         updatedRecords[editDetail] = res.data.record;
         setRecords(updatedRecords);
+        
 
         toast.success("Record updated successfully");
         setEditDetail(null);
